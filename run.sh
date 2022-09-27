@@ -1,0 +1,1 @@
+echo "hello world form CP-b11-jenkins" > run.txt
