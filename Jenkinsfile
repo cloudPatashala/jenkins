@@ -20,6 +20,12 @@ pipeline {
                 echo 'This is Stage 2..'
                 sh 'cat name.txt'
                 echo "This is batch ${params.batch}"
+				sh 'packer build aws-ubuntu.pkr.hcl'
+            }
+        }
+		stage('Packer') {
+            steps {
+				sh 'packer build aws-ubuntu.pkr.hcl'
             }
         }
     }
