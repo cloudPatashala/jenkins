@@ -24,8 +24,6 @@ pipeline {
         }
 		stage('Packer') {
             steps {
-				sh 'packer init .'
-				sh 'packer fmt .'
 				sh 'packer build aws-ubuntu.pkr.hcl'
             }
         }
