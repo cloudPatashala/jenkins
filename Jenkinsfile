@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('STG1') {
             steps {
-               git credentialsId: 'git', url: 'git@github.com:cloudPatashala/jenkins.git'
+               git url: 'git@github.com:cloudPatashala/jenkins.git'
             }
         }
         stage('STG3') {
