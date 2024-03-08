@@ -1,7 +1,7 @@
 pipeline {
     agent any
     
-    parameters { choice(name: 'batch', choices: ['cp-b08', 'cp-b09', 'cp-b11'], description: '') }
+    parameters { choice(name: 'batch', choices: ['cp-b08', 'cp-b09', 'cp-b11', 'cp-b30'], description: '') }
 
     stages {
         stage('STG1') {
