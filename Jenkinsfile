@@ -13,18 +13,20 @@ pipeline {
             steps {
                 echo 'This is stage 3....'
                 sh 'ls -l'
+				sleep 13
             }
         }
         stage('STG2') {
             steps {
                 echo 'This is Stage 2..'
                 sh 'cat name.txt'
+				sleep 10
                 echo "This is batch ${params.batch}"
             }
         }
-		stage('Packer') {
+		stage('STG4') {
             steps {
-				sh 'packer build aws-ubuntu.pkr.hcl'
+				echo "nothing much to do with jenkins"
             }
         }
     }
